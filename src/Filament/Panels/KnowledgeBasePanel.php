@@ -123,15 +123,6 @@ class KnowledgeBasePanel extends Panel
             ?? config('app.name');
     }
 
-    public function getTheme(): Theme
-    {
-        if (! isset($this->viteTheme)) {
-            throw new Exception('The knowledge base panel needs to be registered with a custom vite theme.');
-        }
-
-        return parent::getTheme();
-    }
-
     public function getPath(): string
     {
         if (! empty($path = parent::getPath())) {
